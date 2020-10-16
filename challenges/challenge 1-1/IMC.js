@@ -1,4 +1,4 @@
-const name = "Carlos"
+const name = "Carlo"
 const weight = 84
 const height = 1.88
 
