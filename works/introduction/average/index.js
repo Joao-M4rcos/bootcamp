@@ -2,7 +2,6 @@
 // between students and send
 // average calculation message
 
-
 const student1 = 'John'
 const gradeStudent1 = 9.8
 
