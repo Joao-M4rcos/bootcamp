@@ -1,4 +1,4 @@
-const name = "Silvan"
+const name = "Silvana"
 const sex = "F"
 const age = 48
 const contribution = 23
