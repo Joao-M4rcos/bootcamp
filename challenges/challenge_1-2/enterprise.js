@@ -1,7 +1,7 @@
 // Vetores e Objetos
 
 const enterprise = {
-    name: "Rockeseat",
+    name: "Rocketseat",
     color: "purple",
     focus: "Programming",
     address: {
