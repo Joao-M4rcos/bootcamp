@@ -13,17 +13,14 @@ const users = [
     }
 ]
 
-let result = 0
-for(let i = 0; i < users.length; i++){
-    let result = `${users[i].name} works with ${users[i].technologies[0]}, ${users[i].technologies[1]}`
+for(let user of users){
+    let result = `${user.name} works with ${user.technologies.join(', ')}`
     console.log(result)
 }
 
 checkIfUserUsesCSS = (user) => {
-    for(let i = 0; i < user.technologies.length; i++) {
-        if(user.technologies[i] == "CSS") {
-            return true
-        }
+    for(let technology of user.technologies) {
+        if(technology == "CSS") return true
     }
 }
 
