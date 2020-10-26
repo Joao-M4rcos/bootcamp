@@ -38,10 +38,12 @@ const classB = [
 
 calcAvg = (students) => {
     let sum = 0
+
     for(let i = 0; i < students.length; i++) {
         sum += students[i].grade
     }
     avg = sum / students.length
+
     return avg
 }
 
@@ -49,12 +51,8 @@ const avg1 = calcAvg(classA)
 const avg2 = calcAvg(classB)
 
 sendMessage = (avg) => {
-    if (avg >= 5) {
-        console.log(`The class average was ${avg}. Congrats!`)
-    }
-    else{
-        console.log(`The class average was less than 5: ${avg}.`)
-    }
+    if (avg >= 5) { console.log(`The class average was ${avg}. Congrats!`) } 
+    else{ console.log(`The class average was less than 5: ${avg}.`) }
 }
 
 sendMessage(avg1, 'classA')

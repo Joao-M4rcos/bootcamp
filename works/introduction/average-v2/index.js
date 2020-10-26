@@ -21,9 +21,5 @@ const studentsNames = ["John", "Jubileu", "Jorg"]
 
 const avg = (students[0].grade + students[1].grade + students[2].grade) / 3
 
-if (avg >= 5) {
-    console.log(`The average was ${avg} Congrats`)
-}
-else{
-    console.log(`The average was ${avg}`)
-}
+if (avg >= 5) { console.log(`The average was ${avg} Congrats`) }
+else{ console.log(`The average was ${avg}`) }

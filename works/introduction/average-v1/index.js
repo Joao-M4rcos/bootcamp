@@ -13,9 +13,5 @@ const gradeStudent3 = 2
 
 const avg = (gradeStudent1 + gradeStudent2 + gradeStudent3) / 3
 
-if (avg >= 5) {
-    console.log(`The average was ${avg} Congrats`)
-}
-else{
-    console.log(`The average was ${avg}`)
-}
+if (avg >= 5) { console.log(`The average was ${avg} Congrats`)}
+else{ console.log(`The average was ${avg}`) }
