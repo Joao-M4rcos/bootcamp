@@ -18,6 +18,7 @@ const users = [
 
 calcBalance = (income, expense) => {
     const balance = sumNumbers(income) - sumNumbers(expense)
+    
     return balance
 }
 

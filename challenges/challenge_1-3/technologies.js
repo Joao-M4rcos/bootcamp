@@ -15,6 +15,7 @@ const users = [
 
 for(let user of users){
     let result = `${user.name} works with ${user.technologies.join(', ')}`
+
     console.log(result)
 }
 
@@ -27,7 +28,5 @@ checkIfUserUsesCSS = (user) => {
 for(let i = 0; i < users.length; i++) {
     const userWorksWithCSS = checkIfUserUsesCSS(users[i])
 
-    if(userWorksWithCSS == true) {
-        console.log(`The user ${users[i].name} works with CSS`)
-    }
+    if(userWorksWithCSS == true) { console.log(`The user ${users[i].name} works with CSS`) }
 }
