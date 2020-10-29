@@ -175,3 +175,10 @@ footer {
     color: var(--color-gray);
     filter: brightness(50%);
 }
+
+/* MODAL.ACTIVE */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
