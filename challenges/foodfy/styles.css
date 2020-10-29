@@ -13,7 +13,7 @@
 }   
 
 body {
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -26,6 +26,7 @@ header {
     position: relative;
     top: 8px;
     margin-right: 100px;
+    margin-left: -19px;
 }
 
 .links a {
@@ -76,11 +77,60 @@ header {
     color: var(--color-dark);
 }
 
+.about-foodfy {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.title__about-foodfy {
+    margin: 20px 0 20px 0;
+    color: var(--color-dark);
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+.titles {
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-dark);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content__about-foodfy {
+    margin-bottom: 30px;
+}
+
+.content__about-foodfy p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+    padding-bottom: 26px
+}
+
+.content__ours-recipes {
+    margin-bottom: 50px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+}
+
+footer {
+    padding: 23px;
+    background: #EEEEEE;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-gray-dark);
+    text-align: center;
+}
+
 /* CARDS */
 
 .cards {
     max-width: 900px;
     margin: 0 auto;
+    padding-top: 20px;
     margin-bottom: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -103,16 +153,6 @@ header {
     font-size: 14px;
     line-height: 24px;
     color: var(--color-gray);
-}
-
-footer {
-    position: relative;
-    padding: 23px;
-    background: #EEEEEE;
-    font-size: 14px;
-    line-height: 24px;
-    color: var(--color-gray-dark);
-    text-align: center;
 }
 
 /* MODAL */
