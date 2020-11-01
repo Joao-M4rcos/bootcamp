@@ -1,0 +1,50 @@
+{% extends "layout.njk"%}
+
+{% block head %}
+
+    <title>Challenge 3-2: Courses</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+    <section class="cards">
+
+    {% for item in items %}
+
+        <div class="card {{ item.css }}" id="{{ item.id }}">
+            <div class="card__image-container" >
+                <img src="{{ item.logo_url }}" alt="" >
+            </div>
+            <div class="card__content">
+                <h1>{{ item.title }}</h1>
+                <h3>{{ item.type }}</h3>
+                <p>{{ item.description }}</p>
+            </div>
+            <div class="card__info">
+                {{ item.button }}
+            </div>
+        </div>
+
+    {% endfor %}
+
+    </section>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <a href="" class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+            <i class="material-icons maximize-modal">
+                maximize
+            </i>
+            <div class="modal-content">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+{% endblock %}
