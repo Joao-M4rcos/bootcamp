@@ -1,0 +1,19 @@
+{% extends "layout.njk"%}
+
+{% block head %}
+
+    <title>Challenge 3-3: {{ item.title }}</title>
+
+{% endblock %}
+
+{% block content %}
+
+    <section class="course">
+
+            <div class="card__course-container">
+                <iframe src="https://app.rocketseat.com.br/{{ item.id }}" frameborder="0"></iframe>
+            </div>
+
+    </section>
+
+{% endblock %}

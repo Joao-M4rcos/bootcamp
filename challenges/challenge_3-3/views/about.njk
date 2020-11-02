@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Challenge 3-3: About</title>
+
+{% endblock %}
+
+{% block content %}
+
+    <div id="wrapper">
+        <img src="{{ about.avatar_url }}" alt="Image from {{ about.name }}">
+        <h1>{{ about.name }}</h1>
+        <h2>{{ about.details }}</h2>
+        <ul>
+            {% for technology in about.technologies %}
+            <li>{{ technology.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="links-footer" class="links">
+        {% for link in about.links %}
+        <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

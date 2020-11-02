@@ -1,0 +1,316 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+
+:root {
+    --color-purple: rgb(130, 87, 229);
+    --color-gray: rgb(61, 57, 57);
+    --color-green: rgb(4, 211, 97);
+    --color-orange: rgb(253, 149, 31);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: #222122;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+header {
+    padding: 30px;
+    border-bottom: 2px solid #333333;
+    background: rgba(0, 0, 0, 0.2);
+
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    color:white;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 30px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: var(--color-purple)
+}
+
+#wrapper {
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper img {
+    border-radius: 50%;
+    border: solid 5px var(--color-green);
+    margin-bottom: 32px;
+    height: 300px;
+}
+
+#wrapper h1 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+#wrapper h2 {
+    max-width: 550px;
+    margin: 8px auto;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+#wrapper ul {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+#wrapper ul li {
+    list-style-type: none;
+}
+
+#links-footer a{
+    border-bottom: 2px solid var(--color-purple);
+}
+
+.not-found {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.not-found a {
+    text-decoration: none;
+    color: white;
+}
+
+.not-found h2 {
+    margin: 50px auto;
+    font-size: 28px;
+    line-height: 38px;
+    background: #131213;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.not-found h2:hover {
+    color: var(--color-purple);
+    background-color: white;
+    cursor: pointer;
+}
+
+.not-found p {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: bold;
+}
+
+.not-found img {
+    margin-top: 30px;
+}
+
+/* CARDS */
+
+
+/* GENERAL */
+.cards {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: var(--color-gray);
+    padding: 64px;
+    border-radius: 15px;
+}
+
+.card__image-container {
+    max-width: 100px;
+    margin: 64px auto 0;
+}
+
+.card__image-container img {
+    width: 110px;
+    height: 90px;
+}
+
+.card__content,
+.card__info {
+    text-align: center;
+}
+
+.card__content {
+    padding-bottom: 100px;
+}
+
+.card__content h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.card__content h3 {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 4px;
+    color: rgb(187, 187, 187);
+    margin-bottom: 50px;
+}
+
+.card__content p {
+    font-size: 16px;
+    line-height: 26px;
+    width: 76.5%;
+    margin: 0 auto;
+}
+
+.card__info {
+    display: grid;
+    align-items: center;
+}
+
+/* END GENERAL */
+
+/* SPECIFIC CARD */
+
+.card__starter:hover {
+    border: 2px solid var(--color-purple);
+    margin: -10px 0 10px;
+    cursor: pointer;
+}
+
+.card__starter strong {
+    color: var(--color-purple);
+}
+
+.card__launchbase:hover {
+    border: 2px solid var(--color-orange);
+    margin: -10px 0 10px;
+    cursor: pointer;
+}
+
+.card__launchbase strong {
+    color: var(--color-orange);
+}
+
+.card__gostack strong {
+    color: var(--color-green);
+}
+
+.card__button {
+    background-color: var(--color-green);
+    padding: 15px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    border: 2px solid var(--color-green);
+}
+
+.card__button strong {
+    color: black;
+}
+
+.card__button:hover { 
+    color: white;
+    background-color: var(--color-gray);
+    filter: brightness(80%);
+    border-radius: 5px;
+    border: 2px solid var(--color-green);
+}
+
+.card__button:hover strong {
+    color: white;
+}
+
+/* END SPECIFIC */
+
+/* MODAL */
+
+.modal-overlay {
+    background-color: rgba(0,0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal .maximize-modal{
+    color: black;
+    position: absolute;
+    right: 50px;
+    top: 15px;
+    cursor: pointer;
+}
+
+/* MODAL ACTIVE */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.maximize {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
+
+/* COURSE PAGE */
+
+.course {
+    margin: 0 auto;
+    width:100%;
+    height: 100%;
+}
+
+.card__course-container {
+    position: relative;
+    padding-top: 62.5%;
+}
+
+.card__course-container iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
