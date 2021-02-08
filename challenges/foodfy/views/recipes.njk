@@ -1,0 +1,34 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <header>
+        <div class="links">
+            <a href="/"><img src="/img/logo.png" alt=""></a>
+            <a href="/about">About</a>
+            <a href="/recipes" style="font-weight: bold;">Recipes</a>
+        </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <section class="cards" style="margin-bottom: 400px;">
+
+        {% for item in items %}
+            <div class="card" id="{{ item.id }}">
+                <div class="card__image-container" id="img/burger.png">
+                    <img src="{{ item.image }}" alt="">
+                </div>
+                <div class="card__title" id="Triple bacon burger">
+                    <p>{{ item.title }}</p>
+                </div>
+                <div class="card__author" id="by Jorge Relato">
+                    <p>{{ item.author }}</p>
+                </div>
+            </div>
+
+        {% endfor %}
+    </section>
+
+    <script src="/scripts.js"></script>
+
+{% endblock %}

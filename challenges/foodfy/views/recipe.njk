@@ -1,0 +1,51 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <section class="recipe">
+
+        <div class="recipe_image-container">
+            <img src="{{ item.image }}" alt="">
+        </div>
+
+        <div class="recipe_basic-content">
+            <h2>{{ item.title }}</h2>
+            <p>by
+                {{ item.author }}</p>
+        </div>
+
+        <div class="recipe_ingredients-content text-decoration">
+            <h3>Ingredients</h3>
+            <span class="buttonI button" id="ingredients">Hide</span>
+
+            <ul>
+                {% for i in item.ingredients %}
+                    <li>{{ i }}</li>
+                {% endfor %}
+            </ul>
+
+        </div>
+
+        <div class="recipe_preparation-content text-decoration">
+            <h3>Preparation</h3>
+            <span class="buttonP button" id="preparation">Hide</span>
+
+            <p>{{ item.preparation }}</p>
+
+        </div>
+
+        <div class="recipe_information-content text-decoration">
+            <h3>Additional Information</h3>
+            <span class="buttonInfo button" id="information">Hide</span>
+            {% if item.information == '' %}
+                <p>No additional information</p>
+            {% else %}
+                <p>{{ item.information }}</p>
+            {% endif %}
+
+        </div>
+    </section>
+
+    <script src="/scripts.js"></script>
+
+{% endblock %}

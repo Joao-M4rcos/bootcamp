@@ -1,0 +1,36 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <div class="wrapper">
+        <div>
+            <h1>The best recipes</h1>
+            <p>Learn how to make the best dishes with recipes created by professionals around the entire world.</p>
+        </div>
+        <img src="img/chef.png" alt="">
+    </div>
+
+    <div class="title__most-accessed">
+        <h2>Most accessed</h2>
+    </div>
+
+    <section class="cards">
+
+        {% for item in items %}
+
+            <div class="card">
+                <div class="card__image-container">
+                    <img src="{{ item.image }}" alt="">
+                </div>
+                <div class="card__title">
+                    <p>{{ item.title }}</p>
+                </div>
+                <div class="card__author">
+                    <p>{{ item.author }}</p>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </section>
+    
+{% endblock %}
