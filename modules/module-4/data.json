@@ -1,0 +1,26 @@
+{
+  "instructors": [
+    {
+      "avatar_url": "http://google.com",
+      "name": "Teste",
+      "birth": "2021-02-24",
+      "gender": "M",
+      "services": "bodybuilding, crossfit"
+    },
+    {
+      "avatar_url": "adafaf",
+      "name": "ghjgj",
+      "birth": "2021-02-13",
+      "gender": "M",
+      "services": "ghjhh"
+    },
+    {
+      "avatar_url": "adafaf",
+      "name": "aaa",
+      "birth": 1613520000000,
+      "gender": "M",
+      "services": "ghjhh",
+      "created_at": 1614198735992
+    }
+  ]
+}
