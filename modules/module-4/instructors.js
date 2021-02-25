@@ -9,10 +9,20 @@ exports.post = (req, res) => {
         if (req.body[key] == "") return res.send("Please, fill all fields!")
     }
 
-    req.body.birth = Date.parse(req.body.birth)
-    req.body.created_at = Date.now()
+    let { avatar_url, name, birth, gender, service } = req.body
 
-    data.instructors.push(req.body)
+    birth = Date.parse(birth)
+    const created_at = Date.now()
+    const id = Number(data.instructors.length + 1)
+
+    data.instructors.push({
+        id, 
+        avatar_url, 
+        name, birth, 
+        gender, 
+        service, 
+        created_at
+    })
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
         if (err) return res.send("Write file error!")

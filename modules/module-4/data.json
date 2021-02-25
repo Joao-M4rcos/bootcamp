@@ -1,26 +1,20 @@
 {
   "instructors": [
     {
+      "id": 1,
       "avatar_url": "http://google.com",
       "name": "Teste",
-      "birth": "2021-02-24",
+      "birth": -23890291200000,
       "gender": "M",
-      "services": "bodybuilding, crossfit"
+      "created_at": 1614231649015
     },
     {
-      "avatar_url": "adafaf",
-      "name": "ghjgj",
-      "birth": "2021-02-13",
-      "gender": "M",
-      "services": "ghjhh"
-    },
-    {
+      "id": 2,
       "avatar_url": "adafaf",
       "name": "aaa",
-      "birth": 1613520000000,
-      "gender": "M",
-      "services": "ghjhh",
-      "created_at": 1614198735992
+      "birth": -27080352000000,
+      "gender": "F",
+      "created_at": 1614231677144
     }
   ]
 }
