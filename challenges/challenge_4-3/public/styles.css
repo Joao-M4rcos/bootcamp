@@ -180,3 +180,21 @@ input::placeholder {
 [list]::-webkit-calendar-picker-indicator {
     display: none;
 }
+
+button[type="submit"] {
+    padding: 8px 32px;
+    background-color: var(--primary-color);
+    color: var(--purple-color);
+    border-radius: 4px;
+    margin-top: 32px;
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid var(--purple-color)
+}
+
+button[type="submit"]:hover {
+    background-color: var(--purple-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+}
