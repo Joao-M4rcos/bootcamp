@@ -6,7 +6,7 @@
       "name": "Teste",
       "birth": "2021-02-21",
       "level": "master",
-      "type_class": "remotely",
+      "type_class": "Remotely",
       "subjects": "Math, Physics, Biology",
       "created_at": 1614536951961
     },
@@ -16,7 +16,7 @@
       "name": "aaa",
       "birth": "1212-12-12",
       "level": "doctorate",
-      "type_class": "in_person",
+      "type_class": "In person",
       "subjects": "math",
       "created_at": 1614537902865
     },
@@ -26,7 +26,7 @@
       "name": "Hanna",
       "birth": "2000-01-31",
       "level": "high",
-      "type_class": "in_person",
+      "type_class": "In person",
       "subjects": "Math, Physics",
       "created_at": 1614537936649
     },
@@ -49,6 +49,26 @@
       "type_class": "Remotely",
       "subjects": "Math, Physics",
       "created_at": 1614539019694
+    },
+    {
+      "id": 6,
+      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+      "name": "Complete Higher Education",
+      "birth": "2000-01-12",
+      "level": "master",
+      "type_class": "In Person",
+      "subjects": "Math, Physics",
+      "created_at": 1614541823149
+    },
+    {
+      "id": 7,
+      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+      "name": "Complete Higher Education",
+      "birth": "2000-01-12",
+      "level": "master",
+      "type_class": "In Person",
+      "subjects": "Math, Physics",
+      "created_at": 1614541835774
     }
   ]
 }
