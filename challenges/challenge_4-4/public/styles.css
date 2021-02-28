@@ -181,7 +181,8 @@ input::placeholder {
     display: none;
 }
 
-button[type="submit"] {
+button[type="submit"],
+a.button {
     padding: 8px 32px;
     background-color: var(--primary-color);
     color: var(--purple-color);
@@ -192,9 +193,17 @@ button[type="submit"] {
     border: 2px solid var(--purple-color)
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+a.button:hover {
     background-color: var(--purple-color);
     color: var(--primary-color);
     cursor: pointer;
     border: 2px solid var(--primary-color);
+}
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
 }
