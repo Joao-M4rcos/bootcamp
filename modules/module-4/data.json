@@ -1,40 +1,13 @@
 {
   "instructors": [
     {
-      "id": 1,
+      "id": "2",
       "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Teste",
-      "birth": 468115200000,
-      "gender": "M",
-      "services": "ghjhh",
-      "created_at": 1614345713533
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Teste",
+      "name": "John",
       "birth": 446601600000,
       "gender": "M",
-      "services": "bodybuilding, crossfit",
-      "created_at": 1614345870142
-    },
-    {
-      "id": 3,
-      "avatar_url": "http://google.com",
-      "name": "Teste",
-      "birth": 1612310400000,
-      "gender": "F",
-      "services": "bodybuilding, crossfit",
-      "created_at": 1614534799797
-    },
-    {
-      "id": 4,
-      "avatar_url": "http://google.com",
-      "name": "Teste",
-      "birth": 949276800000,
-      "gender": "F",
       "services": "bodybuilding, crossfit, swimming",
-      "created_at": 1614535514992
+      "created_at": 1614345870142
     }
   ]
 }
