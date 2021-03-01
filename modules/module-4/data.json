@@ -1,4 +1,39 @@
 {
+  "members": [
+    {
+      "id": 3,
+      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+      "name": "Julia",
+      "email": "ju@gmail.com",
+      "birth": 976579200000,
+      "gender": "F",
+      "blood": "A+",
+      "weight": "60",
+      "height": "155"
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+      "name": "Julia",
+      "email": "ju@gmail.com",
+      "birth": 976579200000,
+      "gender": "F",
+      "blood": "A+",
+      "weight": "50",
+      "height": "155"
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+      "name": "Julia",
+      "email": "ju@gmail.com",
+      "birth": 976579200000,
+      "gender": "F",
+      "blood": "A+",
+      "weight": "50",
+      "height": "155"
+    }
+  ],
   "instructors": [
     {
       "id": 2,
@@ -7,15 +42,6 @@
       "birth": 446601600000,
       "gender": "M",
       "services": "bodybuilding, crossfit, swimming",
-      "created_at": 1614345870142
-    },
-    {
-      "id": 3,
-      "avatar_url": "https://images.unsplash.com/photo-1534367743672-ca72e0983478?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8M3wzNjIxMTQ4fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60",
-      "name": "Hanna",
-      "birth": 446601600000,
-      "gender": "F",
-      "services": "bodybuilding",
       "created_at": 1614345870142
     },
     {

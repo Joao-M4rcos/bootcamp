@@ -134,7 +134,7 @@ header {
 
 /* === FORM === */
 
-input {
+input, select {
     width: 100%;
     outline: none;
     color: #555;
@@ -240,7 +240,8 @@ tbody tr td:first-child span {
     border: 2px solid white;
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-container > a {
     background-color: var(--primary-color);
     padding: 8px 16px;
     border: 1px solid var(--primary-color);
@@ -251,7 +252,13 @@ tbody tr td:last-child a {
     border-radius: 4px;
 }
 
-tbody tr td:last-child a:hover {
+.table-container > a {
+    margin-bottom: 16px;
+    display: inline-block
+}
+
+tbody tr td:last-child a:hover,
+.table-container > a:hover {
     background-color: white;
     color: var(--primary-color);
 }
