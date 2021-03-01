@@ -1,0 +1,34 @@
+{
+  "teachers": [
+    {
+      "id": "5",
+      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+      "name": "Hanna",
+      "birth": 453168000000,
+      "level": "doctorate",
+      "type_class": "Remotely",
+      "subjects": "Math, Physics",
+      "created_at": 1614539019694
+    },
+    {
+      "id": 6,
+      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+      "name": "Complete Higher Education",
+      "birth": "2000-01-12",
+      "level": "master",
+      "type_class": "In Person",
+      "subjects": "Math, Physics",
+      "created_at": 1614541823149
+    },
+    {
+      "id": 7,
+      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+      "name": "Complete Higher Education",
+      "birth": "2000-01-12",
+      "level": "master",
+      "type_class": "In Person",
+      "subjects": "Math, Physics",
+      "created_at": 1614541835774
+    }
+  ]
+}
