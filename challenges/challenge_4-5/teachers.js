@@ -5,7 +5,7 @@ const { age, graduation, date } = require('./utils')
 //SHOW
 exports.show = (req, res) => {
 
-    const {id} = req.params
+    const { id } = req.params
 
     const foundTeacher = data.teachers.find((teacher) => {
         return teacher.id == id
@@ -26,11 +26,11 @@ exports.show = (req, res) => {
 
 // CREATE
 exports.post = (req, res) => {
-    
+
     const keys = Object.keys(req.body)
 
     for (key of keys) {
-        if(req.body[key] == "") return res.send("Please, fill all fields!")
+        if (req.body[key] == "") return res.send("Please, fill all fields!")
     }
 
     let { avatar_url, name, birth, level, type_class, subjects } = req.body
@@ -50,7 +50,7 @@ exports.post = (req, res) => {
     })
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
-        if(err) res.send("Write file error!")
+        if (err) res.send("Write file error!")
 
         return res.redirect('/teachers')
     })
@@ -59,7 +59,7 @@ exports.post = (req, res) => {
 
 // EDIT
 exports.edit = (req, res) => {
-    
+
     const { id } = req.params
 
     const foundTeacher = data.teachers.find((teacher) => {
@@ -74,4 +74,51 @@ exports.edit = (req, res) => {
     }
 
     return res.render('teachers/edit', { teacher })
+}
+
+// PUT
+exports.put = (req, res) => {
+    const { id } = req.body
+    let index = 0
+
+    const foundTeacher = data.teachers.find((teacher, foundIndex) => {
+        if (Number(id) == teacher.id) {
+            index = foundIndex
+            return true
+        }
+    })
+
+    if (!foundTeacher) return res.send("Teacher not found!")
+
+    const teacher = {
+        ...foundTeacher,
+        ...req.body,
+        birth: Date.parse(req.body.birth),
+    }
+
+    data.teachers[index] = teacher
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+        if (err) return res.send("Write error!")
+
+        return res.redirect(`/teachers/${id}`)
+    })
+
+}
+
+// DELETE
+exports.delete = (req, res) => {
+    const { id } = req.body
+
+    const filteredTeacher = data.teachers.filter((teacher) => {
+        return teacher .id != id
+    })
+
+    data.teachers = filteredTeacher
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+        if (err) res.send("Write error!")
+
+        return res.redirect("/teachers")
+    })
 }

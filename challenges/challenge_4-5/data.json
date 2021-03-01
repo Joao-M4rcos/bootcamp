@@ -1,50 +1,10 @@
 {
   "teachers": [
     {
-      "id": 1,
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Teste",
-      "birth": "2021-02-21",
-      "level": "master",
-      "type_class": "Remotely",
-      "subjects": "Math, Physics, Biology",
-      "created_at": 1614536951961
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "aaa",
-      "birth": "1212-12-12",
-      "level": "doctorate",
-      "type_class": "In person",
-      "subjects": "math",
-      "created_at": 1614537902865
-    },
-    {
-      "id": 3,
+      "id": "5",
       "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
       "name": "Hanna",
-      "birth": "2000-01-31",
-      "level": "high",
-      "type_class": "In person",
-      "subjects": "Math, Physics",
-      "created_at": 1614537936649
-    },
-    {
-      "id": 4,
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Julia",
-      "birth": "2000-01-12",
-      "level": "higher",
-      "type_class": "In Person",
-      "subjects": "Math, Physics",
-      "created_at": 1614538299471
-    },
-    {
-      "id": 5,
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Ana",
-      "birth": "1984-05-12",
+      "birth": 453168000000,
       "level": "doctorate",
       "type_class": "Remotely",
       "subjects": "Math, Physics",
