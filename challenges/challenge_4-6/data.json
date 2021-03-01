@@ -1,20 +1,20 @@
 {
   "teachers": [
     {
-      "id": "5",
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+      "id": 5,
+      "avatar_url": "https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
       "name": "Hanna",
       "birth": 453168000000,
       "level": "doctorate",
       "type_class": "Remotely",
-      "subjects": "Math, Physics",
+      "subjects": "Math",
       "created_at": 1614539019694
     },
     {
       "id": 6,
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Complete Higher Education",
-      "birth": "2000-01-12",
+      "avatar_url": "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1325&q=80",
+      "name": "Julia",
+      "birth": 947635200000,
       "level": "master",
       "type_class": "In Person",
       "subjects": "Math, Physics",
@@ -22,12 +22,12 @@
     },
     {
       "id": 7,
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Complete Higher Education",
-      "birth": "2000-01-12",
+      "avatar_url": "https://images.unsplash.com/photo-1548449112-96a38a643324?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "name": "John",
+      "birth": 947635200000,
       "level": "master",
       "type_class": "In Person",
-      "subjects": "Math, Physics",
+      "subjects": "Math, Physics, Biology",
       "created_at": 1614541835774
     }
   ]

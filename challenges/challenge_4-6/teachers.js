@@ -2,6 +2,19 @@ const fs = require('fs')
 const data = require('./data.json')
 const { age, graduation, date } = require('./utils')
 
+
+exports.index = (req, res) => {
+
+    const teachers = data.teachers.map((teacher) => {
+        return {
+            ...teacher,
+            subjects: teacher.subjects.split(",")
+        }
+    })
+
+    return res.render('teachers/index', { teachers })
+}
+
 //SHOW
 exports.show = (req, res) => {
 
@@ -82,7 +95,7 @@ exports.put = (req, res) => {
     let index = 0
 
     const foundTeacher = data.teachers.find((teacher, foundIndex) => {
-        if (Number(id) == teacher.id) {
+        if (id == teacher.id) {
             index = foundIndex
             return true
         }
@@ -94,6 +107,7 @@ exports.put = (req, res) => {
         ...foundTeacher,
         ...req.body,
         birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)
     }
 
     data.teachers[index] = teacher
