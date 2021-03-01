@@ -1,0 +1,73 @@
+            <div class="item">
+                <div>Avatar URL</div>
+                <div><input type="text" name="avatar_url" placeholder="http://"
+                value="{{ teacher.avatar_url }}"></div>
+            </div>
+
+            <div class="item">
+                <div>Teacher</div>
+                <div><input type="text" name="name" placeholder="Teacher Name"
+                value="{{ teacher.name }}"></div>
+            </div>
+
+            <div class="item">
+                <div>Birth Date</div>
+                <div>
+                    <input type="date" name="birth"
+                    value="{{ teacher.birth }}">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Educational Level</div>
+                <select name="level">
+                    <option value=""></option>
+                    <option value="high"
+                    {% if teacher.level == "high" %}
+                    selected
+                    {% endif %}>Complete High School</option>
+                    <option value="higher"
+                    {% if teacher.level == "higher" %}
+                    selected
+                    {% endif %}>Complete Higher Education</option>
+                    <option value="master"
+                    {% if teacher.level == "master" %}
+                    selected
+                    {% endif %}>Master</option>
+                    <option value="doctorate"
+                    {% if teacher.level == "doctorate" %}
+                    selected
+                    {% endif %}>Doctorate</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <div>Type of Class</div>
+                <div>
+                    <span><input type="radio" name="type_class" value="In Person" 
+                    {% if teacher.type_class == "In Person" %}
+                    checked
+                    {% endif %}>In person</span>
+                    <span><input type="radio" name="type_class" value="Remotely"
+                    {% if teacher.type_class == "Remotely" %}
+                    checked
+                    {% endif %}>Remotely</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Occupation area</div>
+                <div>
+                    <input type="text" name="subjects" list="subjects" placeholder="Separete each occupation by commas"
+                    value="{{ teacher.subjects }}">
+                    <datalist id="subjects">
+                        <option>Math</option>
+                        <option>Physics</option>
+                        <option>English</option>
+                        <option>Spanish</option>
+                        <option>Biology</option>
+                    </datalist>
+                </div>
+            </div>
+
+            <button type="submit">Save</button>
