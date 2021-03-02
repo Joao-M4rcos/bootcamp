@@ -2,46 +2,26 @@
   "students": [
     {
       "id": 1,
-      "avatar_url": "https://images.unsplash.com/photo-1519721782138-5de3d68a2b32?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-      "name": "Haana",
-      "email": "email@gmail.com",
-      "birth": 976579200000,
-      "level": "3high",
+      "avatar_url": "https://images.unsplash.com/photo-1517256673644-36ad11246d21?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "name": "Julie",
+      "email": "teste@gmail.com",
+      "birth": 973900800000,
+      "school_year": "8rd",
       "workload": "6"
     },
     {
       "id": 2,
-      "avatar_url": "https://images.unsplash.com/photo-1527079326785-f8d98266dfda?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-      "name": "Julia",
-      "email": "julia@gmail.com",
-      "birth": 818726400000,
-      "level": "7rd",
+      "avatar_url": "https://images.unsplash.com/photo-1469504512102-900f29606341?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "name": "Hanna",
+      "email": "email@gmail.com",
+      "birth": 941500800000,
+      "school_year": "3high",
       "workload": "10"
     }
   ],
   "teachers": [
     {
-      "id": 5,
-      "avatar_url": "https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-      "name": "Hanna",
-      "birth": 453168000000,
-      "level": "doctorate",
-      "type_class": "Remotely",
-      "subjects": "Math",
-      "created_at": 1614539019694
-    },
-    {
-      "id": 6,
-      "avatar_url": "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1325&q=80",
-      "name": "Julia",
-      "birth": 947635200000,
-      "level": "master",
-      "type_class": "In Person",
-      "subjects": "Math, Physics",
-      "created_at": 1614541823149
-    },
-    {
-      "id": 7,
+      "id": 1,
       "avatar_url": "https://images.unsplash.com/photo-1548449112-96a38a643324?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
       "name": "John",
       "birth": 947635200000,
@@ -51,7 +31,7 @@
       "created_at": 1614541835774
     },
     {
-      "id": 4,
+      "id": 2,
       "avatar_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
       "name": "Mary",
       "birth": 973900800000,

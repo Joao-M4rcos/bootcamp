@@ -255,6 +255,10 @@ th {
     font-size: 14px;
 }
 
+td {
+    color: var(--secondary-color);
+}
+
 tbody tr td:first-child {
     display: grid;
     grid-template-columns: 1fr 1fr;

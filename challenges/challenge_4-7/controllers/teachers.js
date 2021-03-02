@@ -30,7 +30,12 @@ exports.post = (req, res) => {
     let { avatar_url, name, birth, level, type_class, subjects } = req.body
 
     const created_at = Date.now()
-    const id = Number(data.teachers.length + 1)
+    let id = 1
+    const lastMember = data.teachers[data.teachers.length - 1]
+
+    if (lastMember) {
+        id = lastMember.id + 1
+    }
 
     data.teachers.push({
         id,

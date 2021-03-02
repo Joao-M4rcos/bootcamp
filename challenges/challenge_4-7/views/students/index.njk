@@ -8,7 +8,8 @@
             <thead>
                 <tr>
                     <th>Full Name</th>
-                    <th>Accompaniment</th>
+                    <th>Email</th>
+                    <th>School Year</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -18,12 +19,9 @@
                         <td>
                             <span style="background-image: url({{ student.avatar_url }})"></span>
                             {{ student.name }}</td>
-
-                        <td>
-                            {% for subject in student.subjects %}
-                                <span class="subjects">{{ subject }}</span>
-                            {% endfor %}
                         </td>
+                        <td>{{ student.email }}</td>
+                        <td>{{ student.school_year }}</td>
                         <td>
                             <a href="/students/{{ student.id }}">Show</a>
                         </td>
