@@ -3,12 +3,27 @@
 {% block content %}
 
     <div class="card table-container">
-        <a href="/instructors/create">Add</a>
+
+        <div class="header">
+
+            <a href="/instructors/create" class="button">Add</a>
+            <form action="/instructors" method="GET">
+                <input 
+                type="text" 
+                name="filter" 
+                placeholder="Name or Accompaniment"
+                value={{ filter }}>
+                <button type="submit">Filter</button>
+            </form>
+
+        </div>
+
         <table width="100%">
             <thead>
                 <tr>
                     <th>Instructor</th>
                     <th>Accompaniment</th>
+                    <th>Members</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -23,6 +38,7 @@
                                 <span class="service">{{ service }}</span>
                             {% endfor %}
                         </td>
+                        <td>{{ instructor.total_students }}</td>
                         <td>
                             <a href="/instructors/{{ instructor.id }}">Show</a>
                         </td>
@@ -30,6 +46,11 @@
                 {% endfor %}
             </tbody>
         </table>
+
+    <div class="pagination"
+        data-page={{ pagination.page }}
+        data-total={{ pagination.total }}>  
+    </div>
 
     </div>
 

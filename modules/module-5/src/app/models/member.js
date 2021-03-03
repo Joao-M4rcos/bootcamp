@@ -23,8 +23,9 @@ module.exports = {
             birth,
             blood,
             weight,
-            height
-        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+            height,
+            instructor_id
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
         RETURNING id
         `
 
@@ -36,7 +37,8 @@ module.exports = {
             date(data.birth).iso,
             data.blood,
             data.weight,
-            data.height
+            data.height,
+            data.instructor
         ]
 
         db.query(query, values, (err, results) => {
@@ -46,7 +48,10 @@ module.exports = {
         })
     },
     find(id, callback) {
-        db.query(`SELECT * FROM members WHERE id = ${id}`, (err, results) => {
+        db.query(`SELECT members.*, instructors.name AS instructor_name 
+        FROM members 
+        LEFT JOIN instructors ON (members.instructor_id = instructors.id)
+        WHERE members.id = ${id}`, (err, results) => {
             if (err) throw `Database Error! ${err}`
 
             callback(results.rows[0])
@@ -62,8 +67,9 @@ module.exports = {
             email=($5),
             blood=($6),
             weight=($7),
-            height=($8)
-        WHERE id = ($9)
+            height=($8),
+            instructor_id=($9)
+        WHERE id = ($10)
         `
 
         const values = [
@@ -75,6 +81,7 @@ module.exports = {
             data.blood,
             data.weight,
             data.height,
+            data.instructor,
             data.id
         ]
 
@@ -89,6 +96,13 @@ module.exports = {
             if (err) throw `Database Error! ${err}`
 
             return callback()
+        })
+    },
+    instructorsSelectOptions(callback) {
+        db.query(`SELECT name, id FROM instructors`, (err, results) => {
+            if (err) throw `Database Error! ${err}`
+
+            callback(results.rows)
         })
     }
 }

@@ -3,11 +3,30 @@ const Instructor = require('../models/instructor')
 
 module.exports = {
     index(req, res) {
- 
-        Instructor.all((instructors) => {
-            
-            return res.render("instructors/index", { instructors })
-        })
+
+        let { filter, page, limit } = req.query
+
+        page = page || 1
+        limit = limit || 2
+        let offset = limit * (page - 1)
+
+        const params = {
+            filter,
+            page,
+            limit,
+            offset,
+            callback(instructors) {
+
+                const pagination = {
+                    total: Math.ceil(instructors[0].total / limit),
+                    page
+                }
+
+                return res.render("instructors/index", { instructors, pagination, filter })
+            }
+        }
+
+        Instructor.paginate(params)
 
     },
     create(req, res) {
@@ -22,9 +41,9 @@ module.exports = {
         }
 
         Instructor.create(req.body, (instructor) => {
-            return res.redirect(`/instructors/${ instructor.id }`)
+            return res.redirect(`/instructors/${instructor.id}`)
         })
-        
+
     },
     show(req, res) {
         Instructor.find(req.params.id, (instructor) => {
@@ -54,13 +73,13 @@ module.exports = {
             if (req.body[key] == "") return res.send("Please, fill all fields!")
         }
 
-        Instructor.update(req.body, function() {
+        Instructor.update(req.body, function () {
             return res.redirect(`/instructors/${req.body.id}`)
         })
     },
     delete(req, res) {
-        
-        Instructor.delete(req.body.id, function() {
+
+        Instructor.delete(req.body.id, function () {
             return res.redirect(`/instructors`)
         })
 
