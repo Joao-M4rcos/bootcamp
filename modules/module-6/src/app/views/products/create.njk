@@ -1,22 +1,25 @@
-{% extends 'layout.njk' %}
+
+{% extends "layout.njk" %}
 
 {% block content %}
 
-    <section class="container form">
+<section class="container form">
+    <form method="POST" action="/products" enctype="multipart/form-data">
+    
+        <div class="header">
+            <h3>Cadastrar Produto </h3>
+        </div>
 
-        <form method="POST" action="/products" enctype="multipart/form-data">
+        <div class="fields">
 
-            <div class="header">
-                <h3>Register Product {{ productId }}</h3>
-            </div>
+            {% include 'products/fields.njk' %}
 
-            <div class="fields">
-                {% include 'products/fields.njk' %}
-            </div>
+        </div>    
 
-            <button type="submit" class="button">Save</button>
-        </form>
+        <button class="button" type="submit">Salvar</button>
 
-    </section>
+    </form>
+
+</section>
 
 {% endblock content %}

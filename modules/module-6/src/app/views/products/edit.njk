@@ -1,33 +1,38 @@
-{% extends 'layout.njk' %}
+{% extends "layout.njk" %}
 
 {% block content %}
 
-    <section class="container form">
+<section class="container form">
+    <form method="POST" action="/products?_method=PUT" enctype="multipart/form-data">
+    
+        <div class="header">
+            <h3>Editar Produto </h3>
+        </div>
 
-        <form method="POST" action="/products?_method=PUT" enctype="multipart/form-data">
+        <div class="fields">
 
-            <div class="header">
-                <h3>Edit Product {{ productId }}</h3>
-            </div>
+            {% include 'products/fields.njk' %}
 
-            <div class="fields">
-                {% include 'products/fields.njk' %}
+            <input 
+                type="hidden"
+                name="id"
+                value={{product.id}}>
 
-                <input type="hidden" name="id" value="{{ product.id }}">
-            </div>
+        </div>    
 
-            <button type="submit" class="button edit">Update</button>
-        </form>
+        <button class="button edit" type="submit">Atualizar</button>
+    </form>
 
-        <form id="form-delete" method="POST" action="/products?_method=DELETE">
+    <form id="form-delete" action="/products?_method=DELETE" method="POST">
+        <input 
+            type="hidden"
+            name="id"
+            value={{product.id}}>
+        <button class="button delete" type="submit">Deletar</button>
+    </form>
 
-                <input type="hidden" name="id" value="{{ product.id }}">
-                <button type="submit" class="button delete">Delete</button>
+</section>
 
-            </form>
-
-             {% include 'confirm.njk' %}
-
-    </section>
+{% include "confirm.njk" %}
 
 {% endblock content %}
