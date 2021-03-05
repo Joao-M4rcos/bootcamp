@@ -61,8 +61,6 @@ const PhotosUpload = {
     files: [],
 
     handleFileInput(event) {
-
-        //desestrutura os files e associa eles ao fileList
         const {files: fileList} = event.target
 
 
@@ -70,21 +68,14 @@ const PhotosUpload = {
 
         if (PhotosUpload.hasLimit(event)) return
 
-        //fileList = é um tipo de lista
-        //transforma o fileList em array
         Array.from(fileList).forEach(file => {
             PhotosUpload.files.push(file)
             
-            //FileReader = constructo que ler arquivos
             const reader = new FileReader()
 
-            //quando estiver pronto execute uma function
             reader.onload = () => {
-                const image = new Image() // cria tag html <img>
+                const image = new Image()
 
-                //na iamgem que criar coloca um source
-                //garante que o resultado vai ser string
-                //reader.result = resultado do carregamento do readAsDataURL()
                 image.src = String(reader.result)
 
                 const div = PhotosUpload.getContainer(image)
@@ -92,7 +83,6 @@ const PhotosUpload = {
                 PhotosUpload.preview.appendChild(div)
             }
 
-            //ficará pronto no momento que ele ler isso aqui
             reader.readAsDataURL(file)
         })
         
@@ -103,9 +93,8 @@ const PhotosUpload = {
         const { uploadLimit, input, preview } = PhotosUpload
         const { files: fileList } = input    
 
-        //avisa se o numero de fotos inseridas for maior que o limite de 6
         if (fileList.length > uploadLimit) {
-            alert(`Envie no máximo ${uploadLimit} fotos`)
+            alert(`Send till 6 ${uploadLimit} photos`)
             event.preventDefault()
 
             return true
@@ -113,14 +102,11 @@ const PhotosUpload = {
 
         const photosDiv = []
         preview.childNodes.forEach(item => {
-            //pra cada filho faça um push no array photosDiv[]
-            //só adciona elementos do tipo photo
+
             if (item.classList && item.classList.value == "photo")
                 photosDiv.push(item)
         })
 
-        //soma quantidade de fotos ja existentes com adcionadas
-        //previne se tiver mais que 6
         const totalPhotos = fileList.length + photosDiv.length
         if (totalPhotos > uploadLimit) {
             alert("You have reach the max limit of photos")
