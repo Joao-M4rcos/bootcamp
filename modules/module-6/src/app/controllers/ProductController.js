@@ -19,7 +19,6 @@ module.exports = {
         })
 
     },
-
     async post(req, res){
         const keys = Object.keys(req.body)
             
@@ -53,7 +52,7 @@ module.exports = {
         const { day, hour, minutes, month } = date(product.updated_at)
 
         product.published = {
-            day: `${day}/${month}`,
+            day: `${month}/${day}`,
             hour: `${hour}h ${minutes}min`
         }
 
@@ -98,7 +97,7 @@ module.exports = {
             
         for(key of keys) {
             if(req.body[key] == "" && key != "removed_files"){
-                return res.send("Por favor preencha todos os campos")
+                return res.send("Please fill all fields")
             }
         }
 
@@ -130,11 +129,12 @@ module.exports = {
 
         await Product.update(req.body)
 
-        return res.redirect(`/products/${req.body.id}/edit`)
+        return res.redirect(`/products/${req.body.id}`)
 
     },
 
     async delete(req,res) {
+        
         await Product.delete(req.body.id)
 
         return res.redirect('/products/create')

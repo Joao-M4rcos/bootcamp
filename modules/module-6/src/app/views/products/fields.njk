@@ -1,5 +1,5 @@
 <div class="item">
-    <div>Categoria</div>
+    <div>Category</div>
     <div>
         <select name="category_id">
             {% for category in categories %}
@@ -13,19 +13,19 @@
 </div>
 
 <div class="item">
-    <div>Título</div>
+    <div>Title</div>
     <div>
         <input
             type="text" 
             name="name"
-            placeholder="Digite o Título do Anúncio"
+            placeholder="Type the ad Title"
             value="{{product.name}}"
         >
     </div>
 </div>
 
 <div class="item">
-    <div>Descrição</div>
+    <div>Description</div>
     <div>
         <textarea name="description">{{product.description}}</textarea>
     </div>
@@ -33,7 +33,7 @@
 
 
 <div class="item">
-    <div>Fotos</div>
+    <div>Photos</div>
     <div>
         <div id="photos-upload">
             <input 
@@ -44,7 +44,7 @@
                 accept="image/*"
                 onchange="PhotosUpload.handleFileInput(event)"
             >
-            <p>Selecione até 6 Fotos</p>
+            <p>Select till 6 photos</p>
         </div>
         <div id="photos-preview">
             {% if files %}
@@ -66,12 +66,12 @@
 
 
 <div class="item">
-    <div>Valor</div>
+    <div>Value</div>
     <div>
         <input
             type="text" 
             name="price"
-            placeholder="Preço do Produto"
+            placeholder="Product Price"
             value="{{product.price}}"
             onkeydown="Mask.apply(this, 'formatBRL')"
         >
@@ -82,12 +82,12 @@
 </div>
 
 <div class="item">
-    <div>Quantidade</div>
+    <div>Quantity</div>
     <div>
         <input
             type="number" 
             name="quantity"
-            placeholder="Estoque disponível"
+            placeholder="Available Stock"
             value="{{product.quantity}}"
         >
     </div>
@@ -95,7 +95,7 @@
 
 {% if (product.status == '1') or (product.status == 0) %}
 <div class="item">
-    <div>Disponível ?</div>
+    <div>Available</div>
     <div>
         <span>
             <input 
@@ -104,7 +104,7 @@
                 value="1"
                 {% if product.status == '1' %}
                 checked
-                {% endif %}> Sim
+                {% endif %}> Yes
             </span>
         <span>
             <input 
@@ -114,7 +114,7 @@
                 {% if product.status == '0' %}
                 checked
                 {% endif %}
-                > Não
+                > No
         </span>
     </div>
 </div>

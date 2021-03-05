@@ -6,7 +6,7 @@
     <form method="POST" action="/products?_method=PUT" enctype="multipart/form-data">
     
         <div class="header">
-            <h3>Editar Produto </h3>
+            <h3>Edit Photos</h3>
         </div>
 
         <div class="fields">
@@ -20,7 +20,7 @@
 
         </div>    
 
-        <button class="button edit" type="submit">Atualizar</button>
+        <button class="button edit" type="submit">Update</button>
     </form>
 
     <form id="form-delete" action="/products?_method=DELETE" method="POST">
@@ -28,7 +28,7 @@
             type="hidden"
             name="id"
             value={{product.id}}>
-        <button class="button delete" type="submit">Deletar</button>
+        <button class="button delete" type="submit">Delete</button>
     </form>
 
 </section>
