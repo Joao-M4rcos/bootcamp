@@ -19,6 +19,8 @@ module.exports = {
             offset,
             callback(members) {
 
+                if(members.length == 0) return res.redirect("members/create")
+
                 const pagination = {
                     total: Math.ceil(members[0].total / limit),
                     page

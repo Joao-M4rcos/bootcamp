@@ -17,12 +17,14 @@ module.exports = {
             offset,
             callback(instructors) {
 
-                const pagination = {
-                    total: Math.ceil(instructors[0].total / limit),
-                    page
-                }
+                if(instructors.length == 0) return res.redirect("instructors/create")
 
-                return res.render("instructors/index", { instructors, pagination, filter })
+                    const pagination = {
+                        total: Math.ceil(instructors[0].total / limit) || 1,
+                        page
+                    }
+    
+                    return res.render("instructors/index", { instructors, pagination, filter })
             }
         }
 
